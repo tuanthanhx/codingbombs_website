@@ -1,7 +1,5 @@
 // _mock
 import { _pricingHome } from 'src/_mock';
-// components
-import ScrollProgress from 'src/components/scroll-progress';
 //
 import PricingHome from '../../pricing/home';
 import {
@@ -20,7 +18,6 @@ import {
 export default function HomeView() {
   return (
     <>
-      <ScrollProgress />
 
       <HomeHero />
 

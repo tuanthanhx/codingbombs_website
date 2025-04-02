@@ -14,7 +14,7 @@ import { paths } from 'src/routes/paths';
 // components
 import Image from 'src/components/image';
 import Iconify from 'src/components/iconify';
-import SvgColor from 'src/components/svg-color';
+// import SvgColor from 'src/components/svg-color';
 
 // ----------------------------------------------------------------------
 
@@ -79,7 +79,7 @@ export default function HomeHero() {
                 figma workspace
               </Button>
 
-              <Stack spacing={3}>
+              {/* <Stack spacing={3}>
                 <Typography variant="overline">AVAILABLE FOR</Typography>
                 <Stack direction="row" spacing={2.5}>
                   {['js', 'ts', 'figma', 'cra', 'nextjs'].map((icon) => (
@@ -90,7 +90,7 @@ export default function HomeHero() {
                     />
                   ))}
                 </Stack>
-              </Stack>
+              </Stack> */}
             </Stack>
           </Grid>
 

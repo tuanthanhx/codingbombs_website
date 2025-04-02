@@ -23,7 +23,7 @@ import { _socials } from 'src/_mock';
 import Logo from 'src/components/logo';
 import Iconify from 'src/components/iconify';
 //
-import { pageLinks, navConfig } from '../nav/config-navigation';
+import { pageLinks, navConfigFooter } from '../nav/config-navigation';
 import ListDesktop from './ListDesktop';
 import ListMobile from './ListMobile';
 
@@ -48,7 +48,7 @@ export default function Footer() {
 
   const { pathname } = useLocation();
 
-  const mobileList = navConfig.find((i) => i.title === 'Pages')?.children || [];
+  const mobileList = navConfigFooter.find((i) => i.title === 'Pages')?.children || [];
 
   const desktopList = pageLinks.sort((listA, listB) => Number(listA.order) - Number(listB.order));
 
@@ -58,10 +58,10 @@ export default function Footer() {
 
   const simpleFooter = (
     <Container sx={{ py: 8, textAlign: 'center' }}>
-      <Logo single />
+      <Logo sx={{ width: 250, marginBottom: '1rem' }} />
 
       <Typography variant="caption" component="div" sx={{ color: 'text.secondary' }}>
-        © 2023. All rights reserved
+        © 2025. All rights reserved
       </Typography>
     </Container>
   );

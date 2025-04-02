@@ -110,6 +110,20 @@ export const pageLinks = [
 
 export const navConfig = [
   { title: 'Home', path: '/' },
+  { title: 'Services', path: paths.services },
+  { title: 'Industries', path: paths.industries },
+  { title: 'Technologies', path: paths.technologies },
+  { title: 'Portfolio', path: paths.portfolio },
+];
+
+export const navConfigFooter = [
+  { title: 'Home', path: '/' },
+  
+  // { title: 'Services', path: paths.services },
+  // { title: 'Industries', path: paths.industries },
+  // { title: 'Technologies', path: paths.technologies },
+  // { title: 'Portfolio', path: paths.portfolio },
+
   { title: 'Components', path: paths.components.root },
   {
     title: 'Pages',

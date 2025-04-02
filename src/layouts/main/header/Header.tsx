@@ -1,6 +1,6 @@
 // @mui
 import { useTheme } from '@mui/material/styles';
-import { Box, Link, Stack, Button, AppBar, Toolbar, Container } from '@mui/material';
+import { Box, Button, AppBar, Toolbar, Container } from '@mui/material';
 // hooks
 import useOffSetTop from 'src/hooks/useOffSetTop';
 import useResponsive from 'src/hooks/useResponsive';
@@ -12,11 +12,8 @@ import { paths } from 'src/routes/paths';
 import { HEADER } from 'src/config-global';
 // components
 import Logo from 'src/components/logo';
-import Label from 'src/components/label';
-import SettingsDrawer from 'src/components/settings/drawer';
 //
 import { NavMobile, NavDesktop, navConfig } from '../nav';
-import Searchbar from '../../components/Searchbar';
 import HeaderShadow from '../../components/HeaderShadow';
 
 // ----------------------------------------------------------------------
@@ -57,56 +54,26 @@ export default function Header({ headerOnDark }: Props) {
           }),
         }}
       >
-        <Container sx={{ height: 1, display: 'flex', alignItems: 'center' }}>
+        <Container
+          sx={{ height: 1, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+        >
           <Box sx={{ lineHeight: 0, position: 'relative' }}>
-            <Logo />
-
-            <Link href="https://zone-docs.vercel.app/changelog" target="_blank" rel="noopener">
-              <Label
-                color="info"
-                sx={{
-                  ml: 0.5,
-                  px: 0.5,
-                  top: -14,
-                  left: 60,
-                  height: 20,
-                  fontSize: 11,
-                  cursor: 'pointer',
-                  position: 'absolute',
-                }}
-              >
-                v2.0
-              </Label>
-            </Link>
+            <Logo sx={{ width: 280, position: 'relative', top: '-0.4rem' }} />
           </Box>
 
           {isMdUp && <NavDesktop data={navConfig} />}
 
-          <Stack
-            spacing={2}
-            flexGrow={1}
-            direction="row"
-            alignItems="center"
-            justifyContent="flex-end"
-          >
-            <Stack spacing={1} direction="row" alignItems="center">
-              <Searchbar />
-
-              <SettingsDrawer />
-            </Stack>
-
-            {isMdUp && (
-              <Button
-                variant="contained"
-                color="inherit"
-                href={paths.zoneStore}
-                target="_blank"
-                rel="noopener"
-              >
-                Buy Now
-              </Button>
-            )}
-          </Stack>
+          {isMdUp && (
+            <Button
+              variant="contained"
+              color="inherit"
+              href={paths.contact}
+              target="_blank"
+              rel="noopener"
+            >
+              Get in Touch
+            </Button>
+          )}
 
           {!isMdUp && <NavMobile data={navConfig} />}
         </Container>

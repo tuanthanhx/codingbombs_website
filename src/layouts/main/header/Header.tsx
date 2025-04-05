@@ -68,8 +68,6 @@ export default function Header({ headerOnDark }: Props) {
               variant="contained"
               color="inherit"
               href={paths.contact}
-              target="_blank"
-              rel="noopener"
             >
               Get in Touch
             </Button>
